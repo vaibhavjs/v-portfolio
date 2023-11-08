@@ -55,6 +55,10 @@ const EmailSection = () => {
           open. Whether you have a question or just want to say hi, I&apos;ll
           try my best to get back to you!
         </p>
+        <p className="text-[#ADB7BE] mb-4 max-w-md">
+          E-mail: mr.vaibhavjs@gmail.com <br></br>
+          Phone: +91 8668370577
+        </p>
         <div className="socials flex flex-row gap-2">
           <a href="https://github.com/vaibhavjs" target="_blank">
             <Image src={GithubIcon} alt="Github Icon" />

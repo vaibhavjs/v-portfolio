@@ -4,6 +4,7 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { EyeIcon, CloudArrowDownIcon } from "@heroicons/react/24/outline";
 
 const HeroSection = () => {
   return (
@@ -37,6 +38,7 @@ const HeroSection = () => {
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
           An ardent software developer with a keen specialization in full-stack web development.
           </p>
+          
           <div>
             {/* <Link
               href="/contact"
@@ -44,7 +46,7 @@ const HeroSection = () => {
             >
               Hire Me
             </Link> */}
-            <a
+            {/* <a
               href="/vaibhav-gaikwad-resume.pdf"
               download
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
@@ -52,8 +54,33 @@ const HeroSection = () => {
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 Download Resume
               </span>
-            </a>
+            </a> */}
           </div>
+      
+          <div className="group block w-full sm:w-fit rounded-full mt-3">
+            <div className="relative bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full px-5 py-2 transition-all duration-500">
+              <div>
+                <span className="text-white px-6"> Resume </span>
+              </div>
+              <div className="overlay items-center justify-evenly absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
+                <a
+                  href="/vaibhav-gaikwad-resume.pdf"
+                  target="_blank"
+                  className="h-9 w-9 relative border-[#ADB7BE] hover:border-white group/link"
+                >
+                  <EyeIcon className="h-9 w-9 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white" />
+                </a>
+                <a
+                  href="/vaibhav-gaikwad-resume.pdf"
+                  download
+                  className="h-9 w-9 mr-2 relative border-[#ADB7BE] hover:border-white group/link"
+                >
+                  <CloudArrowDownIcon className="h-9 w-9 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white" />
+                </a>
+              </div>
+            </div>
+          </div>
+
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
